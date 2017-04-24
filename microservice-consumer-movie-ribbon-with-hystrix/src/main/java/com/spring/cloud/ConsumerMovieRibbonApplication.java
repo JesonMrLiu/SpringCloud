@@ -27,6 +27,7 @@ public class ConsumerMovieRibbonApplication {
 		return new RestTemplate();
 	}
 	
+	
 	public static void main(String[] args) {
 		SpringApplication.run(ConsumerMovieRibbonApplication.class, args);
 	}

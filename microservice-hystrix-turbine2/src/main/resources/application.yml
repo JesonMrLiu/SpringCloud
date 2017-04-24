@@ -1,0 +1,24 @@
+server:
+  port: 8031
+spring:
+  application:
+    name: microservice-hystrix-turbine
+eureka:
+  client:
+    service-url:
+      defaultZone: http://micheal:123456@localhost:8761/eureka/ #http://peer1:8762/eureka/,http://peer2:8763/eureka/
+#    registry-refresh-single-vip-address: ${spring.application.name}
+  instance:
+    prefer-ip-address: true
+    
+turbine:
+  aggregator:
+    clusterConfig: MICROSERVICE-CONSUMER-MOVIE-RIBBON-WITH-HYSTRIX2
+  appConfig: microservice-consumer-movie-ribbon-with-hystrix2
+  
+turbine.instanceUrlSuffix.MICROSERVICE-CONSUMER-MOVIE-RIBBON-WITH-HYSTRIX2: ribbon/hystrix.stream
+
+logging:
+  level:
+    root: INFO
+    com.netflix.turbine.monitor: DEBUG

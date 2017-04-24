@@ -1,0 +1,21 @@
+security:
+  basic:
+    enabled: true
+  user:
+    name: micheal
+    password: 123456
+server:
+  port: 8761
+  
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://micheal:123456@localhost:8761/eureka
+  #bashboard.enabled配置为eureka的首页
+#  dashboard:
+#    enabled: true      
+#    path: /x
+  environment: product    #配置Eureka Server首页System Status的Environment属性值
+  datacenter: cloud       #配置Eureka Server首页System Status的Data center属性值

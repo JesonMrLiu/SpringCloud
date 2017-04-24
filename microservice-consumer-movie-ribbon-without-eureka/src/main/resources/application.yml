@@ -3,7 +3,7 @@ server:
   
 spring:
   application:
-    name: microservice.consumer.movie.ribbon
+    name: microservice-consumer-movie-ribbon-without-eureka
     
 eureka:
   client:
